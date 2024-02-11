@@ -1,0 +1,16 @@
+note over browser:
+User interacts with the SPA interface
+and enters note content in a text field
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/api/notes
+note over server:
+Receives the new note data and creates a new note
+in the server's database
+end note
+server-->browser: 201 Created (response status)
+
+note over browser:
+SPA processes the response status and updates the UI
+to reflect the successful creation of the new note
+end note
